@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 namespace Console_tic_tac_toe
@@ -37,13 +38,25 @@ namespace Console_tic_tac_toe
             Console.WriteLine("Cadrillage avec les options de placement :");
             Console.WriteLine("╔═╦═╦═╗");
             Console.WriteLine("║7║8║9║");
-            Console.WriteLine("╠═╬═╬═║");
+            Console.WriteLine("╠═╬═╬═╣");
             Console.WriteLine("║4║5║6║");
-            Console.WriteLine("╠═╬═╬═║");
+            Console.WriteLine("╠═╬═╬═╣");
             Console.WriteLine("║1║2║3║");
             Console.WriteLine("╚═╩═╩═╝");
             Console.WriteLine("Veuillez entrez le chiffre qui correspond à où vous voulez placer votre X ou votre O");
             Console.ResetColor();
+            if (Game.DecidePlayerTurn(Game.turnNumber) == 1)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Tour de {Game.playerName1}. Placement de X");
+                Console.ResetColor();
+            }
+            else if (Game.DecidePlayerTurn(Game.turnNumber) == 2)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine($"Tour de {Game.playerName2}. Placement de O");
+                Console.ResetColor();
+            }
         }
         public static void ShowPlayer(int[,] gameGrid, int yPosition, int xPosition)
         {
@@ -77,7 +90,7 @@ namespace Console_tic_tac_toe
             Console.Write("║");
             Console.WriteLine();
             
-            Console.WriteLine("╠═╬═╬═║");
+            Console.WriteLine("╠═╬═╬═╣");
             
             Console.Write("║");
             ShowPlayer(Game.gameGrid, 1, 0);
@@ -88,7 +101,7 @@ namespace Console_tic_tac_toe
             Console.Write("║");
             Console.WriteLine();
 
-            Console.WriteLine("╠═╬═╬═║");
+            Console.WriteLine("╠═╬═╬═╣");
             
             Console.Write("║");
             ShowPlayer(Game.gameGrid, 2, 0);
