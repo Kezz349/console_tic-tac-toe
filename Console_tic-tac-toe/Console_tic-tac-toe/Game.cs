@@ -9,6 +9,18 @@ namespace Console_tic_tac_toe
         public static string playerName1 = "";
         public static string playerName2 = "";
 
-        public static int 
+        public static int player1Score = 0;
+        public static int player2Score = 0;
+
+        public static string[,] grid =
+        {
+            {" ", " ", " "},
+            {" ", " ", " "},
+            {" ", " ", " "}
+        };
+
+
+
+
     }
 }
