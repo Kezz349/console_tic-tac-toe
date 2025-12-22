@@ -176,7 +176,7 @@ namespace Console_tic_tac_toe
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write(Game.playerName1);
                 Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine($" a gagné la partie. Son total de point(s) est maintenant de {Game.player2Score} point(s)");
+                Console.WriteLine($" a gagné la partie. Son total de point(s) est maintenant de {Game.player1Score} point(s)");
             }
             else if (playerNumber == 2)
             {
