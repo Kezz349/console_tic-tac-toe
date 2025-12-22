@@ -40,7 +40,10 @@ namespace Console_tic_tac_toe
             while (!exit)
             {
                 Console.Clear();
-                
+                View.ShowInfo();
+                View.ShowGrid();
+
+                int gameInput = Game.ReadNumber();
             }
         }
     }

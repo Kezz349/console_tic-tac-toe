@@ -29,6 +29,7 @@ namespace Console_tic_tac_toe
         }
         public static void ShowInfo()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Jeu en cours...");
             Console.WriteLine($"Joueur 1 : {Game.playerName1} Score : {Game.player1Score} (Fait des X)");
             Console.WriteLine($"Joueur 2 : {Game.playerName2} Score : {Game.player2Score} (Fait des O)");
@@ -41,10 +42,60 @@ namespace Console_tic_tac_toe
             Console.WriteLine("╠═╬═╬═║");
             Console.WriteLine("║7║8║9║");
             Console.WriteLine("╚═╩═╩═╝");
+            Console.ResetColor();
+        }
+        public static void ShowPlayer(int[,] gameGrid, int yPosition, int xPosition)
+        {
+            if (gameGrid[yPosition, xPosition] == 0)
+            {
+                Console.Write(" ");
+            }
+            else if (gameGrid[yPosition, xPosition] == 1)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("X");
+                Console.ResetColor();
+            }
+            else if (gameGrid[yPosition, xPosition] == 2)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("O");
+                Console.ResetColor();
+            }
         }
         public static void ShowGrid()
         {
-            Console.WriteLine()
+            Console.WriteLine("╔═╦═╦═╗");
+            
+            Console.Write("║");
+            ShowPlayer(Game.gameGrid, 0, 0);
+            Console.Write("║");
+            ShowPlayer(Game.gameGrid, 0, 1);
+            Console.Write("║");
+            ShowPlayer(Game.gameGrid, 0, 2);
+            Console.Write("║");
+            
+            Console.WriteLine("╠═╬═╬═║");
+            
+            Console.Write("║");
+            ShowPlayer(Game.gameGrid, 1, 0);
+            Console.Write("║");
+            ShowPlayer(Game.gameGrid, 1, 1);
+            Console.Write("║");
+            ShowPlayer(Game.gameGrid, 1, 2);
+            Console.Write("║");
+            
+            Console.WriteLine("╠═╬═╬═║");
+            
+            Console.Write("║");
+            ShowPlayer(Game.gameGrid, 2, 0);
+            Console.Write("║");
+            ShowPlayer(Game.gameGrid, 2, 1);
+            Console.Write("║");
+            ShowPlayer(Game.gameGrid, 2, 2);
+            Console.Write("║");
+            
+            Console.WriteLine("╚═╩═╩═╝");
         }
     }
 }
