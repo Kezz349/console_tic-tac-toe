@@ -36,6 +36,10 @@ namespace Console_tic_tac_toe
         }
         public static void GameController()
         {
+            if (Game.playerName1 == "" || Game.playerName2 == "")
+            {
+                View.ChoosePlayerNames();
+            }
             bool exit = false;
             while (!exit)
             {

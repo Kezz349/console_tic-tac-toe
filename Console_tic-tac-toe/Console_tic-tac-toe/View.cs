@@ -32,8 +32,15 @@ namespace Console_tic_tac_toe
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Jeu en cours - Pesez sur Escape pour quitter");
-            Console.WriteLine($"Joueur 1 : {Game.playerName1} Score : {Game.player1Score} (Fait des X)");
-            Console.WriteLine($"Joueur 2 : {Game.playerName2} Score : {Game.player2Score} (Fait des O)");
+            Console.Write($"Joueur 1 : {Game.playerName1} Score : {Game.player1Score} Fait des ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("X");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine();
+            Console.Write($"Joueur 2 : {Game.playerName2} Score : {Game.player2Score} Fait des ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("O");
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine();
             Console.WriteLine("Cadrillage avec les options de placement :");
             Console.WriteLine("╔═╦═╦═╗");
@@ -47,14 +54,30 @@ namespace Console_tic_tac_toe
             Console.ResetColor();
             if (Game.DecidePlayerTurn(Game.turnNumber) == 1)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write($"Tour de : ");
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Tour de {Game.playerName1}. Placement de X");
+                Console.Write(Game.playerName1);
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("Placement de ");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("X");
+                Console.WriteLine();
                 Console.ResetColor();
             }
             else if (Game.DecidePlayerTurn(Game.turnNumber) == 2)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write($"Tour de : ");
                 Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine($"Tour de {Game.playerName2}. Placement de O");
+                Console.Write(Game.playerName2);
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("Placement de ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("O");
+                Console.WriteLine();
                 Console.ResetColor();
             }
         }
@@ -113,6 +136,16 @@ namespace Console_tic_tac_toe
             Console.WriteLine();
 
             Console.WriteLine("╚═╩═╩═╝");
+        }
+        public static void ChoosePlayerNames()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Veuillez inscire le nom du joueur 1 :");
+            Game.playerName1 = Console.ReadLine();
+            Console.WriteLine("Veuillez inscire le nom du joueur 2 :");
+            Game.playerName2 = Console.ReadLine();
+            Console.ResetColor();
         }
     }
 }
