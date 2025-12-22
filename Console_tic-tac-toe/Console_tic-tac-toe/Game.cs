@@ -80,5 +80,9 @@ namespace Console_tic_tac_toe
                 return 1;
             }
         }
+        public static void CheckForEndGame()
+        {
+            
+        }
     }
 }

@@ -94,6 +94,7 @@ namespace Console_tic_tac_toe
                     default:
                         break;
                 }
+                Game.CheckForEndGame();
             }
         }
     }
