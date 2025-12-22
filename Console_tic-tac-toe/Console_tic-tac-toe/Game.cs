@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
@@ -152,8 +153,32 @@ namespace Console_tic_tac_toe
                 gridContent += $"{gridInfo},";
             }
 
-            File.WriteAllText("save.txt", gridContent);
-            File.AppendAllText("save.txt", $"{playerName1},{playerName2},{player1Score},{player2Score}");
+            File.WriteAllText("save.txt", $"{playerName1},{playerName2},{player1Score},{player2Score}");
+            File.AppendAllText("save.txt", gridContent);
+
+        }
+        public static void LoadGame()
+        {
+            string[] fullSavedContent = File.ReadAllLines("save.txt");
+
+            string[] scoreNameContent = fullSavedContent[0].Split();
+
+            playerName1 = scoreNameContent[0];
+            playerName2 = scoreNameContent[1];
+            player1Score = Convert.ToInt32(scoreNameContent[2]);
+            player2Score = Convert.ToInt32(scoreNameContent[3]);
+
+            string[] stringGameGrid = fullSavedContent[1].Split(',');
+
+            int counter = 0;
+            for (int y = 0; y < gameGrid.GetLength(0); y++)
+            {
+                for (int x = 0; x < gameGrid.GetLength(1); x++)
+                {
+                    gameGrid[y, x] = Convert.ToInt32(stringGameGrid[counter]);
+                    counter++;
+                }
+            }
         }
     }
 }
