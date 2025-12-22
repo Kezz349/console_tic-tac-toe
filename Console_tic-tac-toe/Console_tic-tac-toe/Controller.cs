@@ -96,6 +96,7 @@ namespace Console_tic_tac_toe
                 }
                 Game.CheckForPlayerWin(1);
                 Game.CheckForPlayerWin(2);
+                Game.CheckForDraw();
             }
         }
     }

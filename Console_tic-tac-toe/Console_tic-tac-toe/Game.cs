@@ -121,11 +121,13 @@ namespace Console_tic_tac_toe
             {
                 player1Score++;
                 ResetGrid();
+                View.ShowWinGame(playerNumber);
             }
             else if (playerNumber == 2)
             {
                 player2Score++;
                 ResetGrid();
+                View.ShowWinGame(playerNumber);
             }
         }
         public static void ResetGrid()
@@ -137,6 +139,10 @@ namespace Console_tic_tac_toe
                     gameGrid[y, x] = 0;
                 }
             }
+        }
+        public static void CheckForDraw()
+        {
+
         }
     }
 }

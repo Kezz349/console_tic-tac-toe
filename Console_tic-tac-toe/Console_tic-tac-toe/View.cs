@@ -166,5 +166,19 @@ namespace Console_tic_tac_toe
             Game.playerName2 = Console.ReadLine();
             Console.ResetColor();
         }
+        public static void ShowWinGame(int playerNumber)
+        {
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            if (playerNumber == 1)
+            {
+                Console.WriteLine($"Bravo! {Game.playerName1} a gagné la partie. Son total de point(s) est maintenant de {Game.player1Score} point(s)");
+            }
+            else if (playerNumber == 2)
+            {
+                Console.WriteLine($"Bravo! {Game.playerName2} a gagné la partie. Son total de point(s) est maintenant de {Game.player2Score} point(s)");
+            }
+            Thread.Sleep(3000);
+            Console.ResetColor();
+        }
     }
 }
