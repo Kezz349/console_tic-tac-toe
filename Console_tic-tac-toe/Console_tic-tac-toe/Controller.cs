@@ -20,10 +20,17 @@ namespace Console_tic_tac_toe
                         Controller.GameController();
                         break;
                     case "2":
-
+                        try
+                        {
+                            Game.LoadGame();
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Vous n'avez pas de partie à charger, veuillez jouer en premier");
+                        }
                         break;
                     case "3":
-
+                        Game.SaveGame(); 
                         break;
                     case "4":
                         exit = true;

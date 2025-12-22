@@ -161,7 +161,7 @@ namespace Console_tic_tac_toe
         {
             string[] fullSavedContent = File.ReadAllLines("save.txt");
 
-            string[] scoreNameContent = fullSavedContent[0].Split();
+            string[] scoreNameContent = fullSavedContent[0].Split(',');
 
             playerName1 = scoreNameContent[0];
             playerName2 = scoreNameContent[1];
