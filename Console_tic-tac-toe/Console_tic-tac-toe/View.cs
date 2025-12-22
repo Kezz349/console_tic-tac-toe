@@ -168,6 +168,7 @@ namespace Console_tic_tac_toe
         }
         public static void ShowWinGame(int playerNumber)
         {
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.Magenta;
             if (playerNumber == 1)
             {
