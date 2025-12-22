@@ -143,5 +143,17 @@ namespace Console_tic_tac_toe
             }
             return true;
         }
+        public static void SaveGame()
+        {
+            string gridContent = "";
+            
+            foreach (int gridInfo in gameGrid)
+            {
+                gridContent += $"{gridInfo},";
+            }
+
+            File.WriteAllText("save.txt", gridContent);
+            File.AppendAllText("save.txt", $"{playerName1},{playerName2},{player1Score},{player2Score}");
+        }
     }
 }
