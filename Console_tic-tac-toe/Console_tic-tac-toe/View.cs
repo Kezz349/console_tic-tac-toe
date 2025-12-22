@@ -32,16 +32,35 @@ namespace Console_tic_tac_toe
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Jeu en cours - Pesez sur Escape pour quitter");
-            Console.Write($"Joueur 1 : {Game.playerName1} | Score : {Game.player1Score} | Pose des ");
+
+            Console.Write($"Joueur 1 : ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write($"{Game.playerName1, -25}");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(" | Score : ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write($"{Game.player1Score, -2}");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(" | Pose des ");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("X");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine();
-            Console.Write($"Joueur 2 : {Game.playerName2} | Score : {Game.player2Score} | Pose des ");
+
+            Console.Write($"Joueur 2 : ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write($"{Game.playerName2, -25}");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(" | Score : ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write($"{Game.player2Score, -2}");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(" | Pose des ");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("O");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine();
+
             Console.WriteLine("Cadrillage avec les options de placement :");
             Console.WriteLine("╔═╦═╦═╗");
             Console.WriteLine("║7║8║9║");
