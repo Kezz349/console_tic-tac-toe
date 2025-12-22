@@ -32,12 +32,12 @@ namespace Console_tic_tac_toe
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Jeu en cours - Pesez sur Escape pour quitter");
-            Console.Write($"Joueur 1 : {Game.playerName1} Score : {Game.player1Score} Fait des ");
+            Console.Write($"Joueur 1 : {Game.playerName1} | Score : {Game.player1Score} | Fait des ");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("X");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine();
-            Console.Write($"Joueur 2 : {Game.playerName2} Score : {Game.player2Score} Fait des ");
+            Console.Write($"Joueur 2 : {Game.playerName2} | Score : {Game.player2Score} | Fait des ");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("O");
             Console.ForegroundColor = ConsoleColor.Green;
