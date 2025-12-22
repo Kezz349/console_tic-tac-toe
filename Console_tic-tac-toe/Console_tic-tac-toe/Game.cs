@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 namespace Console_tic_tac_toe
@@ -22,46 +23,50 @@ namespace Console_tic_tac_toe
         };
         public static void PlacePlayer(int input, int playerTurn)
         {
-            switch (input)
+            if (input == 7 && gameGrid[0, 0] == 0)
             {
-                case 1:
-                    gameGrid[0, 0] = playerTurn;
-                    turnNumber++;
-                    break;
-                case 2:
-                    gameGrid[0, 1] = playerTurn;
-                    turnNumber++;
-                    break;
-                case 3:
-                    gameGrid[0, 2] = playerTurn;
-                    turnNumber++;
-                    break;
-                case 4:
-                    gameGrid[1, 0] = playerTurn;
-                    turnNumber++;
-                    break;
-                case 5:
-                    gameGrid[1, 1] = playerTurn;
-                    turnNumber++;
-                    break;
-                case 6:
-                    gameGrid[1, 2] = playerTurn;
-                    turnNumber++;
-                    break;
-                case 7:
-                    gameGrid[2, 0] = playerTurn;
-                    turnNumber++;
-                    break;
-                case 8:
-                    gameGrid[2, 1] = playerTurn;
-                    turnNumber++;
-                    break;
-                case 9:
-                    gameGrid[2, 2] = playerTurn;
-                    turnNumber++;
-                    break;
-                default:
-                    break;
+                gameGrid[0, 0] = playerTurn;
+                turnNumber++;
+            }
+            else if (input == 8 && gameGrid[0, 1] == 0)
+            {
+                gameGrid[0, 1] = playerTurn;
+                turnNumber++;
+            }
+            else if (input == 9 && gameGrid[0, 2] == 0)
+            {
+                gameGrid[0, 2] = playerTurn;
+                turnNumber++;
+            }
+            else if (input == 4 && gameGrid[1, 0] == 0)
+            {
+                gameGrid[1, 0] = playerTurn;
+                turnNumber++;
+            }
+            else if (input == 5 && gameGrid[1, 1] == 0)
+            {
+                gameGrid[1, 1] = playerTurn;
+                turnNumber++;
+            }
+            else if (input == 6 && gameGrid[1, 2] == 0)
+            {
+                gameGrid[1, 2] = playerTurn;
+                turnNumber++;
+            }
+            else if (input == 1 && gameGrid[2, 0] == 0)
+            {
+                gameGrid[2, 0] = playerTurn;
+                turnNumber++;
+            }
+            else if (input == 2 && gameGrid[2, 1] == 0)
+            {
+                gameGrid[2, 1] = playerTurn;
+                turnNumber++;
+            }
+            else if (input == 3 && gameGrid[2, 2] == 0)
+            {
+                gameGrid[2, 2] = playerTurn;
+                turnNumber++;
             }
         }
         public static int DecidePlayerTurn(int turnNumber)

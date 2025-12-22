@@ -36,11 +36,11 @@ namespace Console_tic_tac_toe
             Console.WriteLine();
             Console.WriteLine("Cadrillage avec les options de placement :");
             Console.WriteLine("╔═╦═╦═╗");
-            Console.WriteLine("║1║2║3║");
+            Console.WriteLine("║7║8║9║");
             Console.WriteLine("╠═╬═╬═║");
             Console.WriteLine("║4║5║6║");
             Console.WriteLine("╠═╬═╬═║");
-            Console.WriteLine("║7║8║9║");
+            Console.WriteLine("║1║2║3║");
             Console.WriteLine("╚═╩═╩═╝");
             Console.WriteLine("Veuillez entrez le chiffre qui correspond à où vous voulez placer votre X ou votre O");
             Console.ResetColor();
