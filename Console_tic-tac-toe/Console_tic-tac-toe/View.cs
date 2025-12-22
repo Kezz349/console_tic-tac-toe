@@ -27,8 +27,13 @@ namespace Console_tic_tac_toe
             Console.WriteLine("Option invalide. Veuillez réessayer");
             Thread.Sleep(3000);       
         }
-        public static void ShowTutorialGrid()
+        public static void ShowInfo()
         {
+            Console.WriteLine("Jeu en cours...");
+            Console.WriteLine($"Joueur 1 : {Game.playerName1} Score : {Game.player1Score} (Fait des X)");
+            Console.WriteLine($"Joueur 2 : {Game.playerName2} Score : {Game.player2Score} (Fait des O)");
+            Console.WriteLine();
+            Console.WriteLine("Veuillez entrez le chiffre qui correspond à où vous voulez placer votre X ou votre O");
             Console.WriteLine("╔═╦═╦═╗");
             Console.WriteLine("║1║2║3║");
             Console.WriteLine("╠═╬═╬═║");
@@ -36,6 +41,10 @@ namespace Console_tic_tac_toe
             Console.WriteLine("╠═╬═╬═║");
             Console.WriteLine("║7║8║9║");
             Console.WriteLine("╚═╩═╩═╝");
+        }
+        public static void ShowGrid()
+        {
+
         }
     }
 }
