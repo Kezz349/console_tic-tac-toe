@@ -119,11 +119,23 @@ namespace Console_tic_tac_toe
         {
             if (playerNumber == 1)
             {
-
+                player1Score++;
+                ResetGrid();
             }
             else if (playerNumber == 2)
             {
-
+                player2Score++;
+                ResetGrid();
+            }
+        }
+        public static void ResetGrid()
+        {
+            for (int y = 0; y < gameGrid.GetLength(0); y++)
+            {
+                for (int x = 0; x < gameGrid.GetLength(1); x++)
+                {
+                    gameGrid[y, x] = 0;
+                }
             }
         }
     }
