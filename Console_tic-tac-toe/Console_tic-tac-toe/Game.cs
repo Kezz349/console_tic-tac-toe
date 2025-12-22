@@ -80,56 +80,45 @@ namespace Console_tic_tac_toe
                 return 1;
             }
         }
-        public static void CheckForPlayerWin(int playerNumber)
+        public static bool CheckForPlayerWin(int playerNumber)
         {
             if (gameGrid[0, 0] == playerNumber && gameGrid[0, 1] == playerNumber && gameGrid[0, 2] == playerNumber)
             {
-                PlayerWin(playerNumber);
+                return true;
             }
             else if (gameGrid[1, 0] == playerNumber && gameGrid[1, 1] == playerNumber && gameGrid[1, 2] == playerNumber)
             {
-                PlayerWin(playerNumber);
+                return true;
             }
             else if (gameGrid[2, 0] == playerNumber && gameGrid[2, 1] == playerNumber && gameGrid[2, 2] == playerNumber)
             {
-                PlayerWin(playerNumber);
+                return true;
             }
             else if (gameGrid[0, 0] == playerNumber && gameGrid[1, 0] == playerNumber && gameGrid[2, 0] == playerNumber)
             {
-                PlayerWin(playerNumber);
+                return true;
             }
             else if (gameGrid[0, 1] == playerNumber && gameGrid[1, 1] == playerNumber && gameGrid[2, 1] == playerNumber)
             {
-                PlayerWin(playerNumber);
+                return true;
             }
             else if (gameGrid[0, 2] == playerNumber && gameGrid[1, 2] == playerNumber && gameGrid[2, 2] == playerNumber)
             {
-                PlayerWin(playerNumber);
+                return true;
             }
             else if (gameGrid[0, 0] == playerNumber && gameGrid[1, 1] == playerNumber && gameGrid[2, 2] == playerNumber)
             {
-                PlayerWin(playerNumber);
+                return true;
             }
             else if (gameGrid[2, 0] == playerNumber && gameGrid[1, 1] == playerNumber && gameGrid[0, 2] == playerNumber)
             {
-                PlayerWin(playerNumber);
+                return true;
+            }
+            else
+            {
+                return false;
             }
         } 
-        public static void PlayerWin(int playerNumber)
-        {
-            if (playerNumber == 1)
-            {
-                player1Score++;
-                ResetGrid();
-                View.ShowWinGame(playerNumber);
-            }
-            else if (playerNumber == 2)
-            {
-                player2Score++;
-                ResetGrid();
-                View.ShowWinGame(playerNumber);
-            }
-        }
         public static void ResetGrid()
         {
             for (int y = 0; y < gameGrid.GetLength(0); y++)
@@ -140,9 +129,20 @@ namespace Console_tic_tac_toe
                 }
             }
         }
-        public static void CheckForDraw()
+        public static bool CheckForDraw()
         {
-
+            bool draw = true;
+            for (int y = 0; y < gameGrid.GetLength(0); y++)
+            {
+                for (int x = 0; x < gameGrid.GetLength(1); x++)
+                {
+                    if (gameGrid[y, x] == 0)
+                    {
+                        draw = false;
+                    }
+                }
+            }
+            return draw;
         }
     }
 }

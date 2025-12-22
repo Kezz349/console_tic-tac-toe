@@ -94,9 +94,22 @@ namespace Console_tic_tac_toe
                     default:
                         break;
                 }
-                Game.CheckForPlayerWin(1);
-                Game.CheckForPlayerWin(2);
-                Game.CheckForDraw();
+                if (Game.CheckForPlayerWin(1))
+                {
+                    Game.player1Score++;
+                    Game.ResetGrid();
+                    View.ShowWinGame(1);
+                }
+                else if (Game.CheckForPlayerWin(2))
+                {
+                    Game.player2Score++;
+                    Game.ResetGrid();
+                    View.ShowWinGame(2);
+                }
+                else if (Game.CheckForDraw() == true)
+                {
+                    Game.ResetGrid();
+                }
             }
         }
     }
