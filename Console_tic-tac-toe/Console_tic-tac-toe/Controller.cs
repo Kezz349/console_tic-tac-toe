@@ -26,7 +26,10 @@ namespace Console_tic_tac_toe
 
                         break;
                     case "4":
-
+                        exit = true;
+                        break;
+                    default:
+                        View.ShowInvalidOption();
                         break;
                 }
             }

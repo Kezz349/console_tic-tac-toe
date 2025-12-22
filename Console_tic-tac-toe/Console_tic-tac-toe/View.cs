@@ -18,6 +18,14 @@ namespace Console_tic_tac_toe
             Console.WriteLine("║ 4. Quitter                            ║");
             Console.WriteLine("╚═══════════════════════════════════════╝");
             Console.Write("Choisissez une option:");
+            Console.ResetColor();
+        }
+        public static void ShowInvalidOption()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("Option invalide. Veuillez réessayer");
+            Thread.Sleep(3000);       
         }
     }
 }
