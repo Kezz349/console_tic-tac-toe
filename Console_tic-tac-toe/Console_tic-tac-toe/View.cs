@@ -42,6 +42,7 @@ namespace Console_tic_tac_toe
             Console.WriteLine("╠═╬═╬═║");
             Console.WriteLine("║7║8║9║");
             Console.WriteLine("╚═╩═╩═╝");
+            Console.WriteLine("Pesez sur Escape pour quitter");
             Console.ResetColor();
         }
         public static void ShowPlayer(int[,] gameGrid, int yPosition, int xPosition)
