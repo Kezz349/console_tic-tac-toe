@@ -12,7 +12,7 @@ namespace Console_tic_tac_toe
         public static int player1Score = 0;
         public static int player2Score = 0;
 
-        public static int[,] grid =
+        public static int[,] gameGrid =
         {
             {0, 0, 0},
             {0, 0, 0},
