@@ -162,14 +162,12 @@ namespace Console_tic_tac_toe
             string[] fullSavedContent = File.ReadAllLines("save.txt");
 
             string[] scoreNameContent = fullSavedContent[0].Split(',');
-
             playerName1 = scoreNameContent[0];
             playerName2 = scoreNameContent[1];
             player1Score = Convert.ToInt32(scoreNameContent[2]);
             player2Score = Convert.ToInt32(scoreNameContent[3]);
 
             string[] stringGameGrid = fullSavedContent[1].Split(',');
-
             int counter = 0;
             for (int y = 0; y < gameGrid.GetLength(0); y++)
             {
