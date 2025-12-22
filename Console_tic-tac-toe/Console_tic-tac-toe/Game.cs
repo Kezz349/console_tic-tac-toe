@@ -131,18 +131,17 @@ namespace Console_tic_tac_toe
         }
         public static bool CheckForDraw()
         {
-            bool draw = true;
             for (int y = 0; y < gameGrid.GetLength(0); y++)
             {
                 for (int x = 0; x < gameGrid.GetLength(1); x++)
                 {
                     if (gameGrid[y, x] == 0)
                     {
-                        draw = false;
+                        return false;
                     }
                 }
             }
-            return draw;
+            return true;
         }
     }
 }
