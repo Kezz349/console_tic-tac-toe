@@ -17,7 +17,7 @@ namespace Console_tic_tac_toe
             Console.WriteLine("║ 3. Sauvegarder les scores et les noms ║");
             Console.WriteLine("║ 4. Quitter                            ║");
             Console.WriteLine("╚═══════════════════════════════════════╝");
-            Console.Write("Choisissez une option:");
+            Console.WriteLine("Choisissez une option:");
             Console.ResetColor();
         }
         public static void ShowInvalidOption()
@@ -44,7 +44,7 @@ namespace Console_tic_tac_toe
         }
         public static void ShowGrid()
         {
-
+            Console.WriteLine()
         }
     }
 }
