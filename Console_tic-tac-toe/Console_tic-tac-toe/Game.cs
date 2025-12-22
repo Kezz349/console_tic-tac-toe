@@ -154,7 +154,7 @@ namespace Console_tic_tac_toe
             }
 
             File.WriteAllText("save.txt", $"{playerName1},{playerName2},{player1Score},{player2Score}");
-            File.AppendAllText("save.txt", gridContent);
+            File.AppendAllText("save.txt", $"\n{gridContent}");
 
         }
         public static void LoadGame()
