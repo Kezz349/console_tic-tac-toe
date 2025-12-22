@@ -106,7 +106,7 @@ namespace Console_tic_tac_toe
                     Game.ResetGrid();
                     View.ShowWinGame(2);
                 }
-                else if (Game.CheckForDraw() == true)
+                else if (Game.CheckForDraw())
                 {
                     Game.ResetGrid();
                 }
