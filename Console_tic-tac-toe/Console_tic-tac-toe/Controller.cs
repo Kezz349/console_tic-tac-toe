@@ -49,7 +49,7 @@ namespace Console_tic_tac_toe
                 {
                     case ConsoleKey.D1:
                     case ConsoleKey.NumPad1:
-                       
+
                         break;
                     case ConsoleKey.D2:
                     case ConsoleKey.NumPad2:
@@ -88,9 +88,8 @@ namespace Console_tic_tac_toe
                         break;
                     default:
                         break;
-
-
                 }
+            }
         }
     }
 }

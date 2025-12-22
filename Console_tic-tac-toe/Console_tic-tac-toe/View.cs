@@ -30,11 +30,11 @@ namespace Console_tic_tac_toe
         public static void ShowInfo()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Jeu en cours...");
+            Console.WriteLine("Jeu en cours - Pesez sur Escape pour quitter");
             Console.WriteLine($"Joueur 1 : {Game.playerName1} Score : {Game.player1Score} (Fait des X)");
             Console.WriteLine($"Joueur 2 : {Game.playerName2} Score : {Game.player2Score} (Fait des O)");
             Console.WriteLine();
-            Console.WriteLine("Veuillez entrez le chiffre qui correspond à où vous voulez placer votre X ou votre O");
+            Console.WriteLine("Cadrillage avec les options de placement :");
             Console.WriteLine("╔═╦═╦═╗");
             Console.WriteLine("║1║2║3║");
             Console.WriteLine("╠═╬═╬═║");
@@ -42,7 +42,7 @@ namespace Console_tic_tac_toe
             Console.WriteLine("╠═╬═╬═║");
             Console.WriteLine("║7║8║9║");
             Console.WriteLine("╚═╩═╩═╝");
-            Console.WriteLine("Pesez sur Escape pour quitter");
+            Console.WriteLine("Veuillez entrez le chiffre qui correspond à où vous voulez placer votre X ou votre O");
             Console.ResetColor();
         }
         public static void ShowPlayer(int[,] gameGrid, int yPosition, int xPosition)
@@ -75,6 +75,7 @@ namespace Console_tic_tac_toe
             Console.Write("║");
             ShowPlayer(Game.gameGrid, 0, 2);
             Console.Write("║");
+            Console.WriteLine();
             
             Console.WriteLine("╠═╬═╬═║");
             
@@ -85,7 +86,8 @@ namespace Console_tic_tac_toe
             Console.Write("║");
             ShowPlayer(Game.gameGrid, 1, 2);
             Console.Write("║");
-            
+            Console.WriteLine();
+
             Console.WriteLine("╠═╬═╬═║");
             
             Console.Write("║");
@@ -95,7 +97,8 @@ namespace Console_tic_tac_toe
             Console.Write("║");
             ShowPlayer(Game.gameGrid, 2, 2);
             Console.Write("║");
-            
+            Console.WriteLine();
+
             Console.WriteLine("╚═╩═╩═╝");
         }
     }
