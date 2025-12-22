@@ -80,9 +80,51 @@ namespace Console_tic_tac_toe
                 return 1;
             }
         }
-        public static void CheckForEndGame()
+        public static void CheckForPlayerWin(int playerNumber)
         {
-            
+            if (gameGrid[0, 0] == playerNumber && gameGrid[0, 1] == playerNumber && gameGrid[0, 2] == playerNumber)
+            {
+                PlayerWin(playerNumber);
+            }
+            else if (gameGrid[1, 0] == playerNumber && gameGrid[1, 1] == playerNumber && gameGrid[1, 2] == playerNumber)
+            {
+                PlayerWin(playerNumber);
+            }
+            else if (gameGrid[2, 0] == playerNumber && gameGrid[2, 1] == playerNumber && gameGrid[2, 2] == playerNumber)
+            {
+                PlayerWin(playerNumber);
+            }
+            else if (gameGrid[0, 0] == playerNumber && gameGrid[1, 0] == playerNumber && gameGrid[2, 0] == playerNumber)
+            {
+                PlayerWin(playerNumber);
+            }
+            else if (gameGrid[0, 1] == playerNumber && gameGrid[1, 1] == playerNumber && gameGrid[2, 1] == playerNumber)
+            {
+                PlayerWin(playerNumber);
+            }
+            else if (gameGrid[0, 2] == playerNumber && gameGrid[1, 2] == playerNumber && gameGrid[2, 2] == playerNumber)
+            {
+                PlayerWin(playerNumber);
+            }
+            else if (gameGrid[0, 0] == playerNumber && gameGrid[1, 1] == playerNumber && gameGrid[2, 2] == playerNumber)
+            {
+                PlayerWin(playerNumber);
+            }
+            else if (gameGrid[2, 0] == playerNumber && gameGrid[1, 1] == playerNumber && gameGrid[0, 2] == playerNumber)
+            {
+                PlayerWin(playerNumber);
+            }
+        } 
+        public static void PlayerWin(int playerNumber)
+        {
+            if (playerNumber == 1)
+            {
+
+            }
+            else if (playerNumber == 2)
+            {
+
+            }
         }
     }
 }
