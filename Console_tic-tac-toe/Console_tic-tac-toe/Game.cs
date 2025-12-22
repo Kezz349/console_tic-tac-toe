@@ -18,27 +18,10 @@ namespace Console_tic_tac_toe
             {0, 0, 0},
             {0, 0, 0}
         };
-        public static int ReadNumber()
+        public static void PlacePlayer()
         {
-            while (true)
-            {
-                try
-                {
-                    int number = Convert.ToInt32(Console.ReadLine);
-                    if (number >= 1 && number <= 9)
-                    {
-                        return number;
-                    }
-                }
-                catch (Exception)
-                {
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
-                    Console.WriteLine("Veuillez écrire un entier valide entre 1 et 9.");
-                }
-            }
+
         }
-
-
 
     }
 }
