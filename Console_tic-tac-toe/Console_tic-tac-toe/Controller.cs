@@ -17,7 +17,7 @@ namespace Console_tic_tac_toe
                 switch (menuInput)
                 {
                     case "1":
-
+                        Controller.GameController();
                         break;
                     case "2":
 
@@ -36,7 +36,12 @@ namespace Console_tic_tac_toe
         }
         public static void GameController()
         {
-
+            bool exit = false;
+            while (!exit)
+            {
+                Console.Clear();
+                
+            }
         }
     }
 }

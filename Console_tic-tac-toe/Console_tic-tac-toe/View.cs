@@ -27,5 +27,15 @@ namespace Console_tic_tac_toe
             Console.WriteLine("Option invalide. Veuillez réessayer");
             Thread.Sleep(3000);       
         }
+        public static void ShowTutorialGrid()
+        {
+            Console.WriteLine("╔═╦═╦═╗");
+            Console.WriteLine("║1║2║3║");
+            Console.WriteLine("╠═╬═╬═║");
+            Console.WriteLine("║4║5║6║");
+            Console.WriteLine("╠═╬═╬═║");
+            Console.WriteLine("║7║8║9║");
+            Console.WriteLine("╚═╩═╩═╝");
+        }
     }
 }
