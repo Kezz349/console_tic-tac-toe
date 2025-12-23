@@ -153,13 +153,13 @@ namespace Console_tic_tac_toe
                 for (int x = 0; x < gameGrid.GetLength(1); x++)
                 {
                     gridContent += gameGrid[y, x];
-                    if (y != gameGrid.GetLength(0) - 1 || x != gameGrid.GetLength(1) - 1)
+                    if (y < gameGrid.GetLength(0) - 1 || x < gameGrid.GetLength(1) - 1)
                     {
                         gridContent += ",";
                     }
                 }
             }
-            
+
             File.WriteAllText("save.txt", $"{playerName1},{playerName2},{player1Score},{player2Score},{turnNumber}");
             File.AppendAllText("save.txt", $"\n{gridContent}");
         }
