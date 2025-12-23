@@ -215,7 +215,7 @@ namespace Console_tic_tac_toe
         public static void LoadGameError()
         {
             Console.ForegroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine("Vous n'avez pas de partie à charger, veuillez jouer en premier. Appuyez sur une touche pour revenir au menu.");
+            Console.WriteLine("Vous n'avez pas de partie à charger, veuillez jouer en premier.");
             Console.ResetColor();
             Thread.Sleep(3000);
         }
