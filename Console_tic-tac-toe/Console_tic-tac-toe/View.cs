@@ -162,9 +162,9 @@ namespace Console_tic_tac_toe
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Veuillez inscire le nom du joueur 1 :");
-            Game.playerName1 = Console.ReadLine();
+            Game.playerName1 = Console.ReadLine() ?? "";
             Console.WriteLine("Veuillez inscire le nom du joueur 2 :");
-            Game.playerName2 = Console.ReadLine();
+            Game.playerName2 = Console.ReadLine() ?? "";
             Console.ResetColor();
         }
         public static void ShowWinGame(int playerNumber)

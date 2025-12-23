@@ -13,7 +13,7 @@ namespace Console_tic_tac_toe
             {
                 Console.Clear();
                 View.ShowMainMenu();
-                string menuInput = Console.ReadLine();
+                string menuInput = Console.ReadLine() ?? "";
                 switch (menuInput)
                 {
                     case "1":
