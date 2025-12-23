@@ -153,7 +153,7 @@ namespace Console_tic_tac_toe
                 gridContent += $"{gridInfo},";
             }
 
-            File.WriteAllText("save.txt", $"{playerName1},{playerName2},{player1Score},{player2Score}");
+            File.WriteAllText("save.txt", $"{playerName1},{playerName2},{player1Score},{player2Score},{turnNumber}");
             File.AppendAllText("save.txt", $"\n{gridContent}");
 
         }
@@ -166,6 +166,7 @@ namespace Console_tic_tac_toe
             playerName2 = scoreNameContent[1];
             player1Score = Convert.ToInt32(scoreNameContent[2]);
             player2Score = Convert.ToInt32(scoreNameContent[3]);
+            turnNumber = Convert.ToInt32(scoreNameContent[4]);
 
             string[] stringGameGrid = fullSavedContent[1].Split(',');
             int counter = 0;
@@ -184,6 +185,7 @@ namespace Console_tic_tac_toe
             playerName2 = "";
             player1Score = 0;
             player2Score = 0;
+            turnNumber = 1;
         }
     }
 }
