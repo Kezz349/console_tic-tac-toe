@@ -198,7 +198,7 @@ namespace Console_tic_tac_toe
             while (true)
             {
                 string name = Console.ReadLine()!;
-                if (String.IsNullOrWhiteSpace(name))
+                if (!String.IsNullOrWhiteSpace(name))
                 {
                     return name;
                 }
