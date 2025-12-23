@@ -147,15 +147,14 @@ namespace Console_tic_tac_toe
         public static void SaveGame()
         {
             string gridContent = "";
-            
+        
             foreach (int gridInfo in gameGrid)
             {
                 gridContent += $"{gridInfo},";
             }
-
+            
             File.WriteAllText("save.txt", $"{playerName1},{playerName2},{player1Score},{player2Score},{turnNumber}");
             File.AppendAllText("save.txt", $"\n{gridContent}");
-
         }
         public static void LoadGame()
         {
