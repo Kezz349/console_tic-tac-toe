@@ -212,5 +212,12 @@ namespace Console_tic_tac_toe
             Console.WriteLine("Votre partie a été réinitialisé avec succès!");
             Thread.Sleep(3000);
         }
+        public static void LoadGameError()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("Vous n'avez pas de partie à charger, veuillez jouer en premier. Appuyez sur une touche pour revenir au menu.");
+            Console.ResetColor();
+            Thread.Sleep(3000);
+        }
     }
 }

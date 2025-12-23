@@ -27,10 +27,7 @@ namespace Console_tic_tac_toe
                         }
                         catch (Exception)
                         {
-                            Console.ForegroundColor = ConsoleColor.DarkRed;
-                            Console.WriteLine("Vous n'avez pas de partie à charger, veuillez jouer en premier. Appuyez sur une touche pour revenir au menu.");
-                            Console.ReadKey();
-                            Console.ResetColor();
+                            View.LoadGameError();
                         }
                         break;
                     case "3":
@@ -40,6 +37,7 @@ namespace Console_tic_tac_toe
                     case "4":
                         Game.ResetGrid();
                         Game.ResetInfo();
+                        View.ShowResetGame();
                         break;
                     case "5":
                         exit = true;
