@@ -178,5 +178,12 @@ namespace Console_tic_tac_toe
                 }
             }
         }
+        public static void ResetInfo()
+        {
+            playerName1 = "";
+            playerName2 = "";
+            player1Score = 0;
+            player2Score = 0;
+        }
     }
 }

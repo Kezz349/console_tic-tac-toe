@@ -16,7 +16,8 @@ namespace Console_tic_tac_toe
             Console.WriteLine("║ 1. Jouer                              ║");
             Console.WriteLine("║ 2. Charger les scores et les noms     ║");
             Console.WriteLine("║ 3. Sauvegarder les scores et les noms ║");
-            Console.WriteLine("║ 4. Quitter                            ║");
+            Console.WriteLine("║ 4. Réinitialiser la partie            ║");
+            Console.WriteLine("║ 5. Quitter                            ║");
             Console.WriteLine("╚═══════════════════════════════════════╝");
             Console.WriteLine("Choisissez une option:");
             Console.ResetColor();
@@ -189,6 +190,27 @@ namespace Console_tic_tac_toe
             Console.WriteLine("Pesez sur un bouton pour recommencer une nouvelle partie.");
             Console.ResetColor();
             Console.ReadKey();
+        }
+        public static void ShowLoadGame()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("Votre partie à été chargé avec succès!");
+            Thread.Sleep(3000);
+        }
+        public static void ShowSaveGame()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("Votre partie à été sauvegardé avec succès!");
+            Thread.Sleep(3000);
+        }
+        public static void ShowResetGame()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("Votre partie a été réinitialisé avec succès!");
+            Thread.Sleep(3000);
         }
     }
 }
