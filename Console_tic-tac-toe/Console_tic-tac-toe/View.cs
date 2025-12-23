@@ -163,6 +163,7 @@ namespace Console_tic_tac_toe
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Veuillez inscire le nom du joueur 1 :");
             Game.playerName1 = Game.ReadName();
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Veuillez inscire le nom du joueur 2 :");
             Game.playerName2 = Game.ReadName();
             Console.ResetColor();
