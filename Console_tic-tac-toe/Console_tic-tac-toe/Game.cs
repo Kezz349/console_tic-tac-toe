@@ -193,5 +193,21 @@ namespace Console_tic_tac_toe
             player2Score = 0;
             turnNumber = 1;
         }
+        public static string ReadName()
+        {
+            while (true)
+            {
+                string name = Console.ReadLine()!;
+                if (String.IsNullOrWhiteSpace(name))
+                {
+                    return name;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("Veuillez inscrire un nom valide.");
+                }
+            }
+        }
     }
 }
