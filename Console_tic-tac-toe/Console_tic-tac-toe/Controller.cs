@@ -26,11 +26,16 @@ namespace Console_tic_tac_toe
                         }
                         catch (Exception)
                         {
+                            Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Vous n'avez pas de partie à charger, veuillez jouer en premier");
+                            Console.ResetColor();
                         }
                         break;
                     case "3":
-                        Game.SaveGame(); 
+                        Game.SaveGame();
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Votre partie à été sauvegardé!");
+                        Console.ResetColor();
                         break;
                     case "4":
                         exit = true;
