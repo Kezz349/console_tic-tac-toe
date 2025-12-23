@@ -206,6 +206,7 @@ namespace Console_tic_tac_toe
                 {
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("Veuillez inscrire un nom valide.");
+                    Console.ResetColor();
                 }
             }
         }
