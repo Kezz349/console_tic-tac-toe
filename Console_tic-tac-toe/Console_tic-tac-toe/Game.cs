@@ -72,14 +72,7 @@ namespace Console_tic_tac_toe
         }
         public static int DecidePlayerTurn(int turnNumber)
         {
-            if (turnNumber % 2 == 0)
-            {
-                return 2;
-            }
-            else
-            {
-                return 1;
-            }
+            return turnNumber % 2 == 0 ? 2 : 1;
         }
         public static bool CheckForPlayerWin(int playerNumber)
         {
