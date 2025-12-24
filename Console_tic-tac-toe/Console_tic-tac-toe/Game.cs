@@ -74,7 +74,6 @@ namespace Console_tic_tac_toe
         {
             return turnNumber % 2 == 0 ? 2 : 1;
         }
-
         public static bool CheckForPlayerWin(int playerNumber)
         {
             if (gameGrid[0, 0] == playerNumber && gameGrid[0, 1] == playerNumber && gameGrid[0, 2] == playerNumber)
